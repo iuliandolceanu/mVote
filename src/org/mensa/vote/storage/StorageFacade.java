@@ -9,7 +9,7 @@ import org.mensa.vote.model.Vote;
 /**
  * Contract between the service and the database.
  */
-public interface StorageFacade {
+public interface StorageFacade extends AutoCloseable {
 
     /**
      * Adds a candidate to the database.

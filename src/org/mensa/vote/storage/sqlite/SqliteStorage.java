@@ -1,5 +1,7 @@
 package org.mensa.vote.storage.sqlite;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.mensa.vote.model.Candidate;
@@ -67,5 +69,17 @@ public class SqliteStorage implements StorageFacade {
     @Override
     public void removeMember(final String memberId) {
         throw new UnsupportedOperationException();
+    }
+
+    /**
+     * Closes connection to database.
+     * {@inheritDoc}
+     *
+     * @throws SQLException
+     *             in case {@link Connection} cannot be closed.
+     */
+    @Override
+    public void close() throws SQLException {
+        SqliteAdapter.getInstance().close();
     }
 }

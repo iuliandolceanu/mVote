@@ -71,4 +71,12 @@ public class InMemoryStorage implements StorageFacade {
     public void removeMember(final String memberId) {
         throw new UnsupportedOperationException();
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void close() {
+        throw new UnsupportedOperationException();
+    }
 }
