@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.mensa.vote.model.Candidate;
+import org.mensa.vote.model.Candidature;
 import org.mensa.vote.model.Member;
 import org.mensa.vote.model.Vote;
 import org.mensa.vote.storage.StorageFacade;
@@ -19,7 +19,7 @@ public class SqliteStorage implements StorageFacade {
      * {@inheritDoc}
      */
     @Override
-    public void addCandidate(final Candidate candidate) {
+    public void addCandidate(final Candidature candidate) {
         throw new UnsupportedOperationException();
     }
 
@@ -35,7 +35,7 @@ public class SqliteStorage implements StorageFacade {
      * {@inheritDoc}
      */
     @Override
-    public Candidate viewCandidate(final String candidateId) {
+    public Candidature viewCandidate(final String candidateId) {
         throw new UnsupportedOperationException();
     }
 

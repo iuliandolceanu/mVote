@@ -2,7 +2,7 @@ package org.mensa.vote.storage;
 
 import java.util.List;
 
-import org.mensa.vote.model.Candidate;
+import org.mensa.vote.model.Candidature;
 import org.mensa.vote.model.Member;
 import org.mensa.vote.model.Vote;
 
@@ -15,15 +15,15 @@ public interface StorageFacade extends AutoCloseable {
      * Adds a candidate to the database.
      *
      * @param candidate
-     *            {@link Candidate} to be added to the database
+     *            {@link Candidature} to be added to the database
      */
-    public void addCandidate(final Candidate candidate);
+    public void addCandidate(final Candidature candidate);
 
     /**
      * Removes the given candidate from the database.
      *
      * @param candidateId
-     *            the id of the {@link Candidate} to be removed
+     *            the id of the {@link Candidature} to be removed
      */
     public void removeCandidate(final String candidateId);
 
@@ -31,10 +31,10 @@ public interface StorageFacade extends AutoCloseable {
      * Returns a candidate by the given Id.
      *
      * @param candidateId
-     *            {@link Candidate}'s id
-     * @return the corresponding {@link Candidate} record
+     *            {@link Candidature}'s id
+     * @return the corresponding {@link Candidature} record
      */
-    public Candidate viewCandidate(final String candidateId);
+    public Candidature viewCandidate(final String candidateId);
 
     /**
      * Adds a vote to the database.

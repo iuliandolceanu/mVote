@@ -13,7 +13,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.mensa.vote.model.Candidate;
+import org.mensa.vote.model.Candidature;
 import org.mensa.vote.model.Vote;
 
 @Produces(MediaType.APPLICATION_JSON)
@@ -22,7 +22,7 @@ public interface VotingService {
 
     @POST
     @Path("/candidates")
-    Response addCandidate(final Candidate candidate);
+    Response addCandidate(final Candidature candidate);
 
     @DELETE
     @Path("/candidates/{id}")
@@ -30,7 +30,7 @@ public interface VotingService {
 
     @GET
     @Path("/candidates/{id}")
-    Candidate viewCandidateProfile(@PathParam("id") final String id);
+    Candidature viewCandidateProfile(@PathParam("id") final String id);
 
     @PUT
     @Path("/candidates/{id}")
